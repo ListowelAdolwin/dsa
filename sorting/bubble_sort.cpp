@@ -1,3 +1,11 @@
+/* TIME COMPLEXITY
+    BEST - O(N)
+    AVERGGE - O(N^2)
+    WORST - O(N^2)
+
+    SPACE COMPLEXITY - O(N^2)
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -38,3 +46,4 @@ void swap_vals(int * arr, int i, int j){
     arr[i] = arr[j];
     arr[j] = temp;
 }
+

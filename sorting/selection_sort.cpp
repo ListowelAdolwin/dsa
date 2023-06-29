@@ -1,3 +1,11 @@
+/* TIME COMPLEXITY
+    BEST - O(N)
+    AVERGGE - O(N^2)
+    WORST - O(N^2)
+
+    SPACE COMPLEXITY - O(N^2)
+*/
+
 #include <iostream>
 using namespace std;
 
