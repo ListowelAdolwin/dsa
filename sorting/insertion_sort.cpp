@@ -1,3 +1,11 @@
+/* TIME COMPLEXITY
+    BEST - O(N)
+    AVERGGE - O(N^2)
+    WORST - O(N^2)
+
+    SPACE COMPLEXITY - O(N^2)
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -11,15 +19,19 @@ int main(){
     cout<<"Before sorting: "<<endl;
     print_arr(arr, n);
 
-    for (int pass = 0; pass < n; pass++) {
-        int minn = pass;
-        for (int comp = pass + 1; comp < n; comp++)
-            if (arr[comp] < arr[minn])
-                minn = comp;
-
-        temp = arr[minn];
-        arr[minn] = arr[pass];
-        arr[pass] = temp;
+    for (int pass = 1; pass < n; pass++) {
+        int curr = pass;
+        while (curr > 0){
+            if (arr[curr] < arr[curr - 1]){
+                temp = arr[curr];
+                arr[curr] = arr[curr - 1];
+                arr[curr - 1] = temp;
+            }
+            else {
+                break;
+            }
+            curr--;
+        }
     }
 
     cout<<"After sorting: "<<endl;
