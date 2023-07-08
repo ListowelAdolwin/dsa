@@ -3,7 +3,7 @@
     AVERGGE - O(N^2)
     WORST - O(N^2)
 
-    SPACE COMPLEXITY - O(N^2)
+    SPACE COMPLEXITY - O(1)
 */
 
 #include <iostream>
