@@ -11,16 +11,16 @@ Instead of just keeping the values in their various indices, we use an array to 
 class HashTable:
     def __init__(self):
         self.MAX = 100
-        self.values = [[] for i in range(self.MAX))
+        self.values = [[] for i in range(self.MAX)]
 
     def get_index(self, value):
         h = 0
         for char in value:
             h += ord(char)
-        return h % MAX
+        return h % self.MAX
 
     def add(self, key, value):
-        h = get_index(key)
+        h = self.get_index(key)
         for value in self.values[h]:
             if value[0] == key:
                 del value
@@ -36,7 +36,7 @@ class HashTable:
     """
 
     def get(self, key):
-        h = get_index(key)
+        h = self.get_index(key)
         for value in self.values[h]:
             if value[0] == key:
                 return value[1]
@@ -51,8 +51,8 @@ class HashTable:
     """
 
     def delete(self, key):
-        h = get_index(key)
+        h = self.get_index(key)
         for key, value in enumerate(self.value[h]):
             if value[0] == key:
-                del self.values[h][index] 
+                del self.values[h][key]
 
